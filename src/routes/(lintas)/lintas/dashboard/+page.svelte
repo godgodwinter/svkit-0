@@ -23,25 +23,25 @@ const onSubmit = async (values) => {
     }
 };
 
-const getData = async () => {
-    console.log('1');
-    try {
-        console.log('2');
-        isLoading = true;
-        const response = await Api.get(`admin/supplier/`);
-        console.log(response);
-        data = response.data;
-        dataForm.nama = data.nama
-        console.log(data);
-        isLoading = false;
-    } catch (error) {
-        isLoading = false;
-        isError = true;
-        // Toast.danger("Warning", "Data Gagal dimuat");
-        console.error(error);
-    }
-};
-getData();
+// const getData = async () => {
+//     console.log('1');
+//     try {
+//         console.log('2');
+//         isLoading = true;
+//         const response = await Api.get(`admin/supplier/`);
+//         console.log(response);
+//         data = response.data;
+//         dataForm.nama = data.nama
+//         console.log(data);
+//         isLoading = false;
+//     } catch (error) {
+//         isLoading = false;
+//         isError = true;
+//         // Toast.danger("Warning", "Data Gagal dimuat");
+//         console.error(error);
+//     }
+// };
+// getData();
 
 
 let a = 0;

@@ -1,6 +1,9 @@
 /* eslint-disable */
 // Api.js
 import axios from "axios";
+
+let temp_token = null;
+
 // https://dev.to/lukocastillo/svelte-3-how-to-connect-your-app-with-a-rest-api-axios-2h4e
 const BASE_URL = import.meta.env.VITE_API_URL
   ? import.meta.env.VITE_API_URL
@@ -14,7 +17,7 @@ const axiosAPI = axios.create({
 const apiRequest = (method, url, request) => {
   // console.log(localStorage.getItem('token'));
   const headers = {
-    authorization: `Bearer ${localStorage.getItem("siswa_token")}`,
+    authorization: `Bearer ${temp_token}`,
   };
   // using the axios instance to perform the request that received from each http method
   return axiosAPI({
@@ -29,7 +32,7 @@ const apiRequest = (method, url, request) => {
 const apiRequestDown = (method, url, request) => {
   // console.log(localStorage.getItem('token'));
   const headers = {
-    authorization: `Bearer ${localStorage.getItem("siswa_token")}`,
+    authorization: `Bearer ${temp_token}`,
     responseType: "blob",
   };
   // using the axios instance to perform the request that received from each http method

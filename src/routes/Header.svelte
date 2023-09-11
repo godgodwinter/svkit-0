@@ -41,7 +41,7 @@
 		<li><a  href="/lintas">UJIAN LINTAS STUDI</a></li>
 		<li><a  href="/hspq">UJIAN HSPQ</a></li>
 		<li><a  href="/ist">UJIAN IST</a></li>
-		<li><a  href="/404">404</a></li>
+		<!-- <li><a  href="/404">404</a></li> -->
 	  </ul>
 	</div>
 	<div class="navbar-end">
